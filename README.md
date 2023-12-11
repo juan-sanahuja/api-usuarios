@@ -18,7 +18,7 @@ Siga estas instrucciones para configurar y ejecutar el proyecto:
 
 3. Navegar al directorio del proyecto:
    ```
-   $ cd spring-boot-crud-user-creation
+   $ cd api-usuarios-main
    ```
 
 4. Build del proyecto utilizando Maven:
@@ -48,11 +48,11 @@ Siga estas instrucciones para configurar y ejecutar el proyecto:
 
 Para agregar un token bearer en el campo "Authorize" en Swagger, siga estos pasos:
 
-1. Obtener un token del endpoint de **Registro** o **Autenticacion**.
+1. Obtener un token del endpoint de **Registro** (o de Autenticación si es que ya registró el usuario) es decir primero debe registrar un usuario y le dará un token.
 
 2. En la interfaz de usuario de Swagger, haga clic en el botón **Authorize** ubicado en la esquina superior derecha.
 
-3. Un cuadro de diálogo aparecerá. Ingrese la palabra "Bearer" seguida de un espacio y el token obtenido en el campo **Value**.
+3. Un cuadro de diálogo aparecerá. **Ingrese la palabra "Bearer" seguida de un espacio** y el token obtenido en el campo **Value**.
 
 4. Haga clic en el botón **Authorize** para aplicar el token
 
