@@ -11,7 +11,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-//@Entity(name = "usuario")
 @Entity
 @Table(name = "usuario")
 @Builder
@@ -27,7 +26,7 @@ public class User implements UserDetails {
     private String password;
     @Enumerated(EnumType.STRING)
     private Role role;
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Phone> phones = new ArrayList<>();
 
     @OneToMany (cascade = CascadeType.ALL, fetch = FetchType.LAZY)

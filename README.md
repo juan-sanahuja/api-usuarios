@@ -9,7 +9,7 @@ Siga estas instrucciones para configurar y ejecutar el proyecto:
 1. Prerequisitos:
   - Java Development Kit (JDK) 11
   - Apache Maven
-  - Git (optional)
+  - Git (opcional)
 
 2. Clona el repositorio localmente usando el siguiente comando:
    ```
@@ -61,3 +61,56 @@ Para agregar un token bearer en el campo "Authorize" en Swagger, siga estos paso
 ## Endpoints
 
 Visualizar en swagger
+
+## Diagramas básicos de funcionamiento
+
+```
+Registro de usuario y generacion de token
+
++---------------------+                           +------------------+
+|    Usuario           |                           |    Servidor       |
++---------------------+                           +------------------+
+          |                                                   |
+          |       Se registra el usuario o autenticacion      |
+          |-------------------------------------------------->|
+          |                                                   |
+          |                                                 
+          |                 Retorna token
+          |<--------------------------------------------------|
+          |                                                   |
+          |                               
+                              
+                                         
+CRUD utilizando token como Authorization
+                 
++---------------------+                           +------------------+
+|    Usuario           |                           |    Servidor       |
++---------------------+                           +------------------+
+          |                                                   |
+          |                                                   | 
+          |        Se envia token en requests CRUD            | 
+          |-------------------------------------------------->|
+          |                                                   |
+          |                                                   |
+          |        Retorno de Read,Update,Delete              |
+          |<--------------------------------------------------|
+          |                                                   |
+```
+
+## Diagrama básico de entidad User y Phone
+
+```
++-------------------+                    +------------------+
+|      User         |                    |      Phone       |
++-------------------+                    +------------------+
+| - id: String      |                    | - number: String |
+| - email: String   |                    | - cityCode: String |
+| - name: String    | 1                * | - countryCode: String|
+| - password: String|------------------->| - user: User      |
+| - phones: List<Phone> |                +------------------+
+| - token: String   |
+| - lastLogin: Date |
+| - created: Date   |
+| - modified: Date  |
++-------------------+
+```
