@@ -106,7 +106,7 @@ CRUD utilizando token como Authorization
 | - id: String      |                    | - number: String |
 | - email: String   |                    | - cityCode: String |
 | - name: String    | 1                * | - countryCode: String|
-| - password: String|------------------->| - user: User      |
+| - password: String|------------------->     |
 | - phones: List<Phone> |                +------------------+
 | - token: String   |
 | - lastLogin: Date |
