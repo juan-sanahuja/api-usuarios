@@ -13,7 +13,7 @@ Siga estas instrucciones para configurar y ejecutar el proyecto:
 
 2. Clona el repositorio localmente usando el siguiente comando:
    ```
-   $ git clone <repository_url>
+   $ git clone https://github.com/juan-sanahuja/api-usuarios
    ```
 
 3. Navegar al directorio del proyecto:
