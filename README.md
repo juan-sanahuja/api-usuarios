@@ -100,14 +100,14 @@ CRUD utilizando token como Authorization
 ## Diagrama básico de entidad User y Phone
 
 ```
-+-------------------+                    +------------------+
-|      User         |                    |      Phone       |
-+-------------------+                    +------------------+
-| - id: String      |                    | - number: String |
-| - email: String   |                    | - cityCode: String |
-| - name: String    | 1                * | - countryCode: String|
-| - password: String|------------------->     |
-| - phones: List<Phone> |                +------------------+
++-------------------+                    +----------------------+
+|      User         |                    |      Phone           |
++-------------------+                    +----------------------+
+| - id: String      |                    | - number: int        |
+| - email: String   |                    | - cityCode: int      |
+| - name: String    | 1                * | - countryCode: int   |
+| - password: String| ------------------>| - phone_id: String   |
+| - phones: List<Phone> |                +----------------------+
 | - token: String   |
 | - lastLogin: Date |
 | - created: Date   |
