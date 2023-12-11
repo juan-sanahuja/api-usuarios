@@ -18,7 +18,7 @@ Siga estas instrucciones para configurar y ejecutar el proyecto:
 
 3. Navegar al directorio del proyecto:
    ```
-   $ cd spring-boot-crud-user-creation
+   $ cd api-usuarios-main
    ```
 
 4. Build del proyecto utilizando Maven:
